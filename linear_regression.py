@@ -28,7 +28,18 @@ regressor=regressor.fit(X_train, y_train)
 
 y_pred=regressor.predict(X_test)
 
+#Virtuallizing the tranning set result
+plt.scatter(X_train, y_train, color='red')
+plt.plot(X_train, regressor.predict(X_train), color='blue')
+plt.title('Salary VS Experience(Tranning set)')
+plt.xlabel('Years of Experience')
+plt.ylabel('Salary')
+plt.show()
+
 print(y_pred)
+
+
+print(plt.show())
 
 
 
